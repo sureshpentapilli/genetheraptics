@@ -1,0 +1,8 @@
+/* Import Bootstrap */
+@import "bootstrap/scss/functions";
+
+/* Override Primary Color */
+$primary: #291670; /* Your desired primary color */
+
+/* Recompile Bootstrap with the new variable */
+@import "bootstrap/scss/bootstrap";

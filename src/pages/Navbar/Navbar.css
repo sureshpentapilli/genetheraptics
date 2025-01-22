@@ -1,0 +1,126 @@
+/* Navbar styles */
+.custom-navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important; /* Ensures it stays on top of other elements */
+  background-color: #f8f9fa; /* Matches your navbar background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a slight shadow */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #D4281E;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.active-link {
+  background-color: #291670 !important;
+  color: #fff !important;
+  border-radius: 4px;
+}
+/* Override the default primary color */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-link {
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
+/* General Navbar Styling */
+.custom-navbar {
+  background: #f8f9fa; /* Light gray background */
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Animation */
+.logo-animation {
+  animation: logoPulse 2s infinite;
+}
+
+@keyframes logoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Brand Name Styling */
+/* 3D Effect for Brand Name */
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #291670; /* Navy-inspired color */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #291670, /* Shadow Layer 1 */ 1px 1px 0px #d4281e; /* Shadow Layer 2 */
+  /* 2px 2px 0px #3498db;   */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effect for 3D Name */
+.brand-name:hover {
+  color: #291670; /* Accent color */
+  transform: translateY(-3px);
+  text-shadow: 2px 2px 2px #d4281e, 1px 1px 2px #d4281e, 2px 2px 2px #d4281e;
+}
+
+/* Navigation Link Styling */
+.navbar-nav .nav-link {
+  color: #2c3e50; /* Default color */
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white; /* Accent color on hover */
+}
+
+/* Active Link Styling */
+.navbar-nav .active-link {
+  color: #291670; /* Accent color */
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar-nav .active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #d4281e;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .active-link:hover::after {
+  width: 100%; /* Expand underline on hover */
+  
+}
+
+/* Smooth Scrolling Effect */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,726 @@
+
+/* video section 1  start*/
+
+
+.custom-carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  padding: 1rem;
+  width: 100%; /* Adjust width for mobile */
+}
+
+@media (max-width: 768px) {
+  .custom-carousel-caption {
+    bottom: 10%; /* Lower the caption for smaller screens */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .custom-carousel-caption h5 {
+    font-size: 18px; /* Smaller headline on mobile */
+  }
+
+  .custom-carousel-caption p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+
+  .custom-carousel-caption a {
+    font-size: 14px; /* Adjust button size */
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+.video-gradient-wrapper {
+  position: relative;
+}
+
+.video-gradient-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+.video-gradient-wrapper video {
+  position: relative;
+  z-index: 0;
+  height: 550px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  /* left: 50%; */
+  left: 0 !important;
+  right: 0 !important;
+  /* transform: translateX(-50%); */
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 64px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  /* font-family: "Roboto Serif", serif; */
+  line-height: 1.5; /* Increase line height for better readability */
+  margin: 0 auto; /* Center the text */
+  
+  max-width: 100%; /* Limit width to avoid content touching edges */
+  text-align: center; /* Align text to the center */
+ 
+}
+
+
+.carousel-caption .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.poultry-name {
+  font-family: 'Playfair Display', serif; /* Choose an elegant font */
+  font-size: 64px; /* Make the text large and prominent */
+  background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff5252);
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Hide the default color */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+  animation: fade-in 3s ease-in-out; /* Animate the entire text */
+}
+
+.egg-o {
+  display: inline-block;
+  width: 0.8em; /* Width of the egg */
+  height: 1.0em; /* Height of the egg */
+  background: linear-gradient(145deg, #f5e6cc, #f4d6aa); /* Egg gradient */
+  border-radius: 50%; /* Oval shape */
+  vertical-align: middle; /* Align with text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Realistic shadow */
+  animation: egg-bounce 2s infinite ease-in-out; /* Bouncing effect */
+  text-indent: -9999px; /* Hide the inner "o" text */
+}
+
+@keyframes egg-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* second carousel letter */
+.animal-health-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #ffffff; /* White */
+
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.unique-a {
+  display: inline-block;
+  font-size: 64px!important;
+  font-family: 'Great Vibes', cursive; /* Elegant, flowing font */
+  color: #D4281E; /* Coral color for contrast */
+  text-shadow: 0px 4px 10px rgba(255, 80, 80, 0.466); /* Glowing effect */
+  animation: pulse 2s infinite ease-in-out; /* Pulsing effect */
+}
+
+/* Pulse animation for the 'A' */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #ff7f50;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff6347; /* Slightly darker coral */
+  }
+  100% {
+    transform: scale(1);
+    color: #ff7f50;
+  }
+}
+
+
+/* third carousel letter */
+
+/* General Styling for the Name */
+.aquaculture-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #2964af; /* Aqua navy blue */
+  text-shadow: 2px 2px 8px rgba(2, 62, 138, 0.3);
+  display: inline-block;
+}
+
+/* Aqua-themed "Q" */
+.aqua-q {
+  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+  color: #2964af;
+  background: linear-gradient(135deg, #caf0f8, #00b4d8, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  animation: spin-and-glow 4s infinite linear;
+}
+
+/* Add water ripple effect */
+.aqua-q:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 180, 216, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  animation: ripple 2s infinite ease-in-out;
+  z-index: -1;
+}
+
+/* Animations */
+
+/* "Q" Glow and Spin */
+@keyframes spin-and-glow {
+  0%, 100% {
+    transform: rotate(0deg);
+    text-shadow: 0 0 8px #00b4d8, 0 0 12px #00b4d8, 0 0 20px rgba(0, 180, 216, 0.5);
+  }
+  50% {
+    transform: rotate(360deg);
+    text-shadow: 0 0 15px #caf0f8, 0 0 25px #00b4d8, 0 0 35px rgba(0, 180, 216, 0.7);
+  }
+}
+
+/* Ripple Animation */
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+  /* section 1 close */
+
+  /* section 2  start */
+  .who-we-paragraph{
+    text-align: justify;
+    line-height: 1.9em;
+    font-family: "Roboto Serif", serif;
+  }
+  .who-we {
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: "Roboto Serif", serif;
+
+color: #291670;
+  }
+  
+  .who-we span {
+    position: relative;
+    display: inline-block; /* Ensures the underline matches the text width */
+  }
+  
+  .who-we span::before {
+    position: absolute;
+    content: "";
+    width: 100%; /* Dynamic width based on the text */
+    height: 5px; /* Height of the underline */
+    left: 0;
+    bottom: -10px; /* Adjust spacing below the text */
+    background: var(--primary, #D4281E); /* Color of the underline */
+    border-radius: 2px;
+  }
+  
+  .who-we span::after {
+    position: absolute;
+    content: "";
+    width: 5px; /* Width of the dot */
+    height: 5px; /* Height of the dot */
+    border-radius: 50%; /* Make it circular */
+    background: #ffffff; /* Color of the dot */
+    bottom: -10px; /* Same bottom alignment as the underline */
+    left: 0; /* Start at the beginning of the underline */
+    animation: dot-scroll 6s infinite linear;
+  }
+  
+  @keyframes dot-scroll {
+    0% {
+      left: 0; /* Start at the beginning of the underline */
+    }
+    100% {
+      left: 100%; /* End at the end of the underline */
+    }
+  }
+  
+
+  .gene-text{
+    font-weight: bold;
+  color: #291670;
+  }
+
+  /* Base style for the button */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #291670, #d4281e);
+  text-decoration: none;
+  border: none !important;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  background: linear-gradient(45deg, #d4281e, #291670);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+/* Ripple animation effect */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.8s ease;
+}
+
+.btn-primary:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Active click effect */
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+  /* section 2 closed */
+
+  /* gap every section */
+  .gap-all{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+
+/* card section 3 start */
+  
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 350px;
+    height: 350px; /* Ensure height to accommodate image and text */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+  }
+  
+  .card .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .card:hover .image img {
+    transform: scale(1.1);
+  }
+  
+  .card .content {
+    position: absolute;
+    top: 100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: top 0.5s, opacity 0.5s;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Keep button at the bottom */
+    overflow: hidden; /* Hide extra content */
+  }
+  
+  .card:hover .content {
+    top: 0; /* Slide in on hover */
+    opacity: 1; /* Make content visible */
+    pointer-events: auto; /* Enable interaction when visible */
+  }
+  
+  .card .content p {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 4;  */
+    -webkit-box-orient: vertical;
+  }
+  
+  .card .content a {
+    margin-top: auto;
+    padding: 10px 15px;
+    background: #291670;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  
+  .card .content h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
+  
+  
+  .card .content a:hover {
+    background: #D4281E;
+  }
+
+  .main-card {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .card .content a {
+    margin-top: auto;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #291670, #d4281e);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card .content a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .card .content a:hover {
+    background: linear-gradient(45deg, #d4281e, #291670);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card .content a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  
+  .card .content a:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  /* section 3 closed */
+
+
+  
+  
+
+  /* section 5 cards start*/
+  /* Advanced Card Animation */
+
+  .certificates{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: "Roboto Serif", serif;
+    color: #291670;
+
+  }
+
+ .Readmore-btn{
+  font-size: 20px;
+  font-weight: bold;
+  color: #291670 !important;
+  font-style: italic;
+  text-transform: uppercase;
+ }
+
+  .infocardContainer {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    background: rgb(0,159,255);
+    background: linear-gradient(121deg, rgba(255,255,255,0) 13%, rgb(236, 194, 194) 100%);
+    transition: all 500ms ease-in;
+    transition-delay: 1s;
+    margin: auto;
+    margin-top: 100px;
+    --margin-top: 100px;
+  }
+  .infocardContainer:hover {
+    width: 100%;
+    border-radius: 100px 10px 100px 100px;
+    transition: all 1s ease-out;
+  }
+
+  .info-co:hover{
+    width: 50%;
+
+  }
+  
+  .infocardContainer div {
+    text-color: white;
+    flex-shrink: 1;
+    width: 100%;
+    --background-color: green;
+  }
+  .infocardContainer div * {
+    display: flex;
+    --flex: inherit;
+    overflow: hidden;
+    text-overflow: hidden;
+    --background-color: yellow;
+    color: white;
+    white-space: nowrap;
+    width: 0;
+    height: auto;
+    transition: all 450ms ease-in;
+    transition-delay: 1s;
+  }
+  .infocardContainer:hover div *{
+    --background-color: purple;
+    display: flex;
+    visibility: visible;
+    transition: all 1s ease-out;
+    transition-delay: 500ms;
+    width: 100%;
+    height: auto;
+  }
+  
+  .infocardContainer #main, .infocardContainer #main img{
+    --background-color: red;
+    height: 200px;
+    width: 200px;
+    padding-right: 10px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .infocardContainer #main img{
+    height: 180px;
+    width: 180px;
+    transition: none;
+    display: float;
+    position: relative;
+    border: 10px solid white;
+    margin: 0 0 0 0; padding: 0 0 0 0;
+  }
+  .infocardContainer #textbois {
+    position: relative;
+    margin: auto;
+  }
+  .infocardContainer #textbois #hotlinks {
+    max-width: 60%;
+    max-height: 30px;
+    
+    --background-color: white;
+    position:absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 13px;
+  }
+  .infocardContainer #textbois #hotlinks * {
+    background-color: white;
+    max-width: 30px;
+    --margin: 0 1px 0 1px;
+    border-radius: 25px;
+  }
+  /*TODO: animate copy main transition style for info*/
+  .infocardContainer #textbois #hotlinks *:hover {
+    
+    
+  }
+
+  .bg-image {
+    position: relative; /* Ensure child elements are positioned correctly */
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), /* Black gradient with 50% opacity */
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../assets/images/bg-image.jpg'); 
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    padding: 50px 0; /* Add padding for spacing */
+    color: white; /* Make text readable on dark background */
+  }
+
+
+
+  /* whatsapp button */
+
+  .whatsapp-button {
+    color: #fff;
+    background-color: #25D366; /* WhatsApp green */
+    border: none;
+    padding: 12px; /* Adjusted padding for a square button */
+    border-radius: 35%; /* Circular button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; /* Icon size */
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #20b954; /* Slightly darker WhatsApp green */
+  }
+  
+
+  .whatsapp-section .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .whatsapp-section .whatsapp-button:hover {
+    background-color: #1ebc5a;
+    color: #fff;
+  }
+  
+  
+  
+  
