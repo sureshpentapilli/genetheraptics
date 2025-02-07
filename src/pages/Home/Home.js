@@ -67,7 +67,10 @@ function Home() {
                   <h5 className="poultry-name">
                     P<span className="egg-o">o</span>ultry
                   </h5>
-                  <p className="animate__animated animate__backInLeft animate__slow" style={{fontFamily:"italic"}}>
+                  <p
+                    className="animate__animated animate__backInLeft animate__slow"
+                    style={{ fontFamily: "italic" }}
+                  >
                     Improving human health through animal health
                   </p>
                   <a
@@ -80,6 +83,7 @@ function Home() {
               </div>
 
               {/* Slide 2 */}
+
               <div className="carousel-item">
                 <div className="video-gradient-wrapper">
                   <video className="d-block w-100" autoPlay loop muted>
@@ -89,9 +93,12 @@ function Home() {
                 </div>
                 <div className="carousel-caption custom-carousel-caption">
                   <h5 className="animal-health-name">
-                    <span className="unique-a">A</span>nimal Health
+                    Ani<span className="letter-m">M</span>al Health
                   </h5>
-                  <p className="animate__animated animate__backInLeft animate__slow"style={{fontFamily:"italic"}}>
+                  <p
+                    className="animate__animated animate__backInLeft animate__slow"
+                    style={{ fontFamily: "italic" }}
+                  >
                     Ensuring animal well-being for a better future
                   </p>
                   <a
@@ -104,28 +111,26 @@ function Home() {
               </div>
 
               {/* Slide 3 */}
-              <div className="carousel-item">
-                <div className="video-gradient-wrapper">
-                  <video className="d-block w-100" autoPlay loop muted>
-                    <source src={aqua} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div className="carousel-caption custom-carousel-caption">
-                  <h5 className="aquaculture-name">
-                    A<span className="aqua-q">Q</span>uaculture
-                  </h5>
-                  <p className="animate__animated animate__backInLeft animate__slow" style={{fontFamily:"italic"}}>
-                    Supporting sustainable water-based farming
-                  </p>
-                  <a
-                    href="#learn-more-3"
-                    className="btn btn-primary animate__animated animate__fadeIn"
-                  >
-                    Learn About Aquaculture
-                  </a>
-                </div>
-              </div>
+      <div className="carousel-item">
+      <div className="video-gradient-wrapper">
+        <video className="d-block w-100" autoPlay loop muted>
+          <source src={aqua} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="carousel-caption custom-carousel-caption">
+        <h5 className="aquaculture-name">
+      
+          Aquaculture
+        </h5>
+        <p className="animate__animated animate__backInLeft animate__slow" style={{ fontFamily: "italic" }}>
+          Supporting sustainable water-based farming
+        </p>
+        <a href="#learn-more-3" className="btn btn-primary animate__animated animate__fadeIn">
+          Learn About Aquaculture
+        </a>
+      </div>
+    </div>
             </div>
 
             {/* Carousel Controls */}
@@ -159,17 +164,19 @@ function Home() {
 
       {/* section 1 closed */}
 
+      <div className="gap-all">
+
       {/* section 2 start */}
-      <section className="gap-all">
+      <section className="">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 gap-for-all">
               <div>
                 <h2 className="who-we">
                   <span>Who we are?</span>
                 </h2>
                 <p className="animate__animated animate__backInLeft  animate__slow who-we-paragraph">
-                  <span className="gene-text">Gene Therapeutics</span> is a
+                  <span className="gene-text">Gene theraptics</span> is a
                   leading manufacturer of wide range of animal health and
                   aquaculture products. Neospark is a technology-based
                   enterprise, where tradition mixes well with courageous
@@ -200,58 +207,50 @@ function Home() {
       {/* section 2 end */}
 
       {/* section 3 start */}
-      <section className="gap-all">
-        <div className="allcards">
-          <div className="container main-card">
-            <div className="card">
-              <div className="image">
-                <img src={hen} alt="Design" />
-              </div>
-              <div className="content">
-                <h3>Poultry</h3>
-                <p>
-                  The history of poultry development in india is a success story
-                  par excellence
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="image">
-                <img src={cowimage} alt="Code" />
-              </div>
-              <div className="content">
-                <h3>Large Animal</h3>
-                <p>
-                  Advances in animal husbandry have touched and transformed the
-                  lives of the largest number of people.
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="image">
-                <img src={aquaimage} alt="Launch" />
-              </div>
-              <div className="content">
-                <h3>Aquaculture</h3>
-                <p>
-                  Aquaculture is concerned with the propagation and rearing of
-                  aquatic organisms
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
+  <section className="responsive-section">
+  <div className="allcards">
+    <div className="container main-card">
+      <div className="card">
+        <div className="image">
+          <img src={hen} alt="Design" />
         </div>
-      </section>
+        <div className="content">
+          <h3 className="headings-color">Poultry</h3>
+          <p>The history of poultry development in India is a success story par excellence.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div className="card">
+        <div className="image">
+          <img src={cowimage} alt="Code" />
+        </div>
+        <div className="content">
+          <h3 className="headings-color">Large Animal</h3>
+          <p>Advances in animal husbandry have touched and transformed the lives of many people.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div className="card">
+        <div className="image">
+          <img src={aquaimage} alt="Launch" />
+        </div>
+        <div className="content">
+          <h3 className="headings-color">Aquaculture</h3>
+          <p>Aquaculture is concerned with the propagation and rearing of aquatic organisms.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* section 3 end */}
 
       {/* section 4 start */}
-      <section className="gap-all">
+      <section className="">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 gap-for-all">
               <div>
                 <h2 className="who-we">
                   <span>12+ Years of Success</span>
@@ -260,14 +259,14 @@ function Home() {
               <div>
                 <p className="who-we-paragraph">
                   It started with Four men who had a dream. From the moment{" "}
-                  <span className="gene-text">Gene Therapeutics</span> was born
+                  <span className="gene-text">Gene theraptics</span> was born
                   on 2012, ingenuity has been a driving force behind our
                   success.
                 </p>
               </div>
               <div className="col-md-6">
                 <p className="who-we-paragraph">
-                  <span className="gene-text">Gene Therapeutics</span> grew up
+                  <span className="gene-text">Gene theraptics</span> grew up
                   with a strong heritage as a research-based company. Neospark
                   travels with updated knowledge as the future is becoming
                   increasingly research driven to meet the needs of healthcare
@@ -283,13 +282,17 @@ function Home() {
         </div>
       </section>
 
+      </div>
+
       {/* section 4 end */}
 
       {/* section 5 start */}
 
-      <h4 className="certificates who-we"><span>Certifications on Quality Management System</span></h4>
-
       <section className="bg-image">
+        <h4 className="certificates who-we">
+          <span>Certifications on Quality Management System</span>
+        </h4>
+
         <div className="container">
           <div className="row">
             {/* Card 1 */}
@@ -301,8 +304,13 @@ function Home() {
                 <div id="textbois">
                   {/* <h2>Emil Alicic</h2> */}
                   <h6>GMP+ International is the authority</h6>
-                  <a href="#" className="Readmore-btn" style={{ display: "flex", justifyContent: "center" }}>Readmore</a>
-                
+                  <a
+                    href="#"
+                    className="Readmore-btn"
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    Readmore
+                  </a>
                 </div>
               </div>
             </div>
@@ -316,8 +324,13 @@ function Home() {
                 <div id="textbois">
                   {/* <h2>Emil Alicic</h2> */}
                   <h6>ISO International is the authority</h6>
-                  <a href="#" style={{ display: "flex", justifyContent: "center" }} className="Readmore-btn">Read more</a>
-                 
+                  <a
+                    href="#"
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="Readmore-btn"
+                  >
+                    Read more
+                  </a>
                 </div>
               </div>
             </div>
@@ -334,8 +347,13 @@ function Home() {
                 <div id="textbois">
                   {/* <h2>Emil Alicic</h2> */}
                   <h6>ISO International is the authority</h6>
-                  <a href="#" style={{ display: "flex", justifyContent: "center" }} className="Readmore-btn">Readmore</a>
-                
+                  <a
+                    href="#"
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="Readmore-btn"
+                  >
+                    Readmore
+                  </a>
                 </div>
               </div>
             </div>

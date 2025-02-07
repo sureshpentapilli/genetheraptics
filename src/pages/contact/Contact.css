@@ -1,0 +1,245 @@
+
+
+
+.map{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.line span {
+    position: relative;
+    display: inline-block; /* Ensures the underline matches the text width */
+  }
+
+  .line span::before {
+    position: absolute;
+    content: "";
+    width: 100%; /* Dynamic width based on the text */
+    height: 5px; /* Height of the underline */
+    left: 0;
+    bottom: -10px; /* Adjust spacing below the text */
+    background: var(--primary, #D4281E); /* Color of the underline */
+    border-radius: 2px;
+  }
+  
+  .line span::after {
+    position: absolute;
+    content: "";
+    width: 5px; /* Width of the dot */
+    height: 5px; /* Height of the dot */
+    border-radius: 50%; /* Make it circular */
+    background: #ffffff; /* Color of the dot */
+    bottom: -10px; /* Same bottom alignment as the underline */
+    left: 0; /* Start at the beginning of the underline */
+    animation: dot-scroll 6s infinite linear;
+  }
+  
+  @keyframes dot-scroll {
+    0% {
+      left: 0; /* Start at the beginning of the underline */
+    }
+    100% {
+      left: 100%; /* End at the end of the underline */
+    }
+  }
+
+
+  .form-style{
+    margin: 10px;
+    margin-bottom: 15px;
+  }
+  .address {
+    font-family:'Playfair Display', serif;
+    text-align: justify;
+  }
+
+
+  .contact-banner {
+    background-image: url('../../../public/images/contact3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+
+
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+}
+
+
+.contact-maps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.color-black{
+  color: 1px solid black !important;
+}
+
+
+.custom-card {
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  text-align: center;
+  color: #291670;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.custom-input,
+.custom-textarea {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-textarea {
+  height: 100px;
+}
+
+.custom-input:focus,
+.custom-textarea:focus {
+  outline: none;
+  border-color: #291670;
+  box-shadow: 0 0 5px rgba(41, 22, 112, 0.5);
+}
+
+.custom-button {
+  background-color: #291670;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #d4281e;
+  transform: translateY(-3px);
+}
+
+
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* .gap-all {
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  padding: 50px 20px;
+} */
+
+.form-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.form-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.custom-input,
+.custom-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus,
+.custom-textarea:focus {
+  border-color: #D4281E;
+  box-shadow: 0 0 4px rgba(255, 126, 95, 0.5);
+  outline: none;
+}
+
+.custom-textarea {
+  height: 120px;
+  resize: none;
+}
+
+.custom-button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.custom-button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7e5f;
+}
+
+.line {
+  position: relative;
+}
+
+
