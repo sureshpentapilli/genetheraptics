@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import logo from "../../assets/images/genelogo.jpeg";
 import { ChevronDown } from "lucide-react";
+
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
       title: "Poultry",
       items: [
         {
-          name: "Veterinary Pharmaceuticals",
+          name: "FEED SUPPLEMENTS",
           subItems: [
             "VITAGENE-FORTE[250GM]",
             "THERAMIN-FORTE",
@@ -35,7 +36,7 @@ const Navbar = () => {
             "AMINO BOOST",
             "LYSINE-G",
             "METHIOGENE",
-            "L-THRIONINE"
+            "L-THRIONINE",
           ],
         },
         {
@@ -48,7 +49,7 @@ const Navbar = () => {
             "BMD",
             "GEN-TRIM-FS",
             "FURAGEN-20%",
-            "TIAMULIN-80%"
+            "TIAMULIN-80%",
           ],
         },
         {
@@ -62,7 +63,16 @@ const Navbar = () => {
             "CAL-D-GENE-LIQ",
             "GROW WIN-LIQ",
             "GENE PRO-LIQ",
-            "GROW WIN-PLUS-LIQ"
+            "GROW WIN-PLUS-LIQ",
+          ],
+        },
+        {
+          name: "ANTIBIOTIC FEED SUPPLEMENT LIQUIDS",
+          subItems: [
+            "LIVOGEN-BH-LIQ",
+            "ENROGEN-BH-LIQ	",
+            "CIPROGEN-LIQ	",
+            "TIAMULINE-10% LIQ	",
           ],
         },
       ],
@@ -72,32 +82,19 @@ const Navbar = () => {
       items: [
         {
           name: "Veterinary Pharmaceuticals",
-          subItems: [
-            "Pain Relievers",
-            "Anthelmintics",
-            "Hormones"
-          ],
+          subItems: ["Pain Relievers", "Anthelmintics", "Hormones"],
         },
         {
           name: "Feed Supplements, Feed Additives, Premixtures",
-          subItems: [
-            "Energy Boosters",
-            "Protein Supplements"
-          ],
+          subItems: ["Energy Boosters", "Protein Supplements"],
         },
         {
           name: "Biosecurity",
-          subItems: [
-            "Vaccination Programs",
-            "Preventive Care"
-          ],
+          subItems: ["Vaccination Programs", "Preventive Care"],
         },
         {
           name: "Topical Formulation",
-          subItems: [
-            "Antiseptic Creams",
-            "Skin Ointments"
-          ],
+          subItems: ["Antiseptic Creams", "Skin Ointments"],
         },
       ],
     },
@@ -106,29 +103,19 @@ const Navbar = () => {
       items: [
         {
           name: "Veterinary Pharmaceuticals",
-          subItems: [
-            "Water Treatment",
-            "Antibiotics"
-          ],
+          subItems: ["Water Treatment", "Antibiotics"],
         },
         {
           name: "Feed Supplements, Feed Additives, Premixtures",
-          subItems: [
-            "Growth Enhancers",
-            "Immunity Boosters"
-          ],
+          subItems: ["Growth Enhancers", "Immunity Boosters"],
         },
         {
           name: "Biosecurity",
-          subItems: [
-            "Water Disinfection",
-            "Hygiene Products"
-          ],
+          subItems: ["Water Disinfection", "Hygiene Products"],
         },
       ],
     },
   };
-  
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -239,37 +226,39 @@ const Navbar = () => {
                         <ul className="list-unstyled">
                           {group.items.map((item) => (
                             <li key={item.name} className="mb-2">
-                              <div
-                                className="d-flex align-items-center justify-content-between"
-                                onClick={() => toggleSubItems(item.name)}
-                                style={{ cursor: "pointer" }}
-                              >
-                                <strong className="text-dark">
+                              <div className="d-flex align-items-center justify-content-between">
+                                {/* Dynamic category in the URL */}
+                                <Link
+                                  to={`/${group.title.toLowerCase()}/${encodeURIComponent(
+                                    item.name
+                                  )}`}
+                                  className="text-dark text-decoration-none fw-bold"
+                                >
                                   {item.name}
-                                </strong>
+                                </Link>
                                 <ChevronDown
                                   size={16}
                                   className={`ms-2 ${
-                                    openSubItem === item.name
-                                      ? "rotate-180"
-                                      : ""
+                                    openSubItem === item.name ? "rotate" : ""
                                   }`}
+                                  onClick={() => toggleSubItems(item.name)}
+                                  style={{ cursor: "pointer" }} // Add cursor pointer
                                 />
                               </div>
 
+                              {/* SubItems List */}
                               {openSubItem === item.name && (
-                                <ul className="list-unstyled ms-3">
+                                <ul className="list-unstyled ps-3">
                                   {item.subItems.map((subItem) => (
-                                    <li
-                                      key={subItem}
-                                      className="text-muted small"
-                                    >
-                                      <a
-                                        href="#"
+                                    <li key={subItem}>
+                                      <Link
+                                        to={`/${group.title.toLowerCase()}/${encodeURIComponent(
+                                          item.name
+                                        )}/${encodeURIComponent(subItem)}`}
                                         className="text-dark text-decoration-none"
                                       >
                                         {subItem}
-                                      </a>
+                                      </Link>
                                     </li>
                                   ))}
                                 </ul>
