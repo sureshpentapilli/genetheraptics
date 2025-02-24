@@ -18,7 +18,9 @@
     "react-router-dom": "^6.28.1",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.4.5",
+    "react-slick": "^0.30.3",
     "sass": "^1.83.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.1",
     "web-vitals": "^4.2.4"
   },

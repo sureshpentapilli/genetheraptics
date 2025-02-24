@@ -4,9 +4,9 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
-import ProductGroupPage from "./pages/ProductGroups/ProductGroupPage";
-import SubItemPage from "./pages/ProductGroups/SubItemPage";
-import ProductPage from "./pages/ProductGroups/ProductPage";
+import CategoryPage from "./pages/categeory/CategoryPage"
+import SubcategoryPage from "./pages/categeory/SubcategoryPage"
+
 
 function App() {
   return (
@@ -17,13 +17,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/productpage" element={<ProductPage />} />
 
-          
-          {/* Dynamic category path */}
-          <Route path="/:category/:categoryName" element={<ProductGroupPage />} />
-          <Route path="/:category/:categoryName/:subItemName" element={<SubItemPage />} />
-
+          {/* <Route path="/category/:id" element={<CategoryPage />} /> */}
+          <Route path="/category/:subcategory/:id" element={<CategoryPage />} />
+          <Route path="/subcategory/:id/:itemId" element={<SubcategoryPage />} />
         </Routes>
       </div>
     </Router>
